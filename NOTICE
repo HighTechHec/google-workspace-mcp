@@ -1,0 +1,6 @@
+Google Workspace MCP Server
+Copyright 2026 Matt Hesketh
+
+This product wraps the Google Workspace CLI (@googleworkspace/cli),
+which is licensed under the Apache License 2.0.
+See: https://github.com/googleworkspace/cli/blob/main/LICENSE

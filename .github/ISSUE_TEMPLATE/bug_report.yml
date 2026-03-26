@@ -1,0 +1,80 @@
+name: Bug Report
+description: Report a bug in JAX-PRIME ONE_MIND
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Which core module is affected?
+      options:
+        - AURA-SPINE (event bus)
+        - Smart Detective (GPU monitoring)
+        - Agent SRE (self-healing)
+        - Elastic Router (model routing)
+        - Council of Five (governance)
+        - Orchestrator (task management)
+        - Discord Bridge (bot interface)
+        - Server API (HTTP endpoints)
+        - Telemetry Exporter (Prometheus)
+        - Self-Healer
+        - Result Collector
+        - Boot Sequence
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical (system down)
+        - High (major feature broken)
+        - Medium (degraded functionality)
+        - Low (cosmetic / minor)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+      placeholder: Clear description of the bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Run `jax-sre`
+        2. Wait for health check cycle
+        3. Observe error in logs
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Output
+      description: Paste relevant logs or error messages
+      render: shell
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: System details
+      placeholder: |
+        OS: Windows 11
+        Python: 3.13.9
+        GPU: RTX 5090 24GB
+        CUDA: 13.1
